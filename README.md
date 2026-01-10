@@ -1,29 +1,8 @@
 # ShadowFox #task 1
-This is my first personal portfolio website, created to showcase my skills, projects, and experience as a web developer. The website is built using HTML, CSS, and JavaScript and features a responsive design, smooth scrolling, interactive buttons, and animated text effects using Typed.js.
+This is my first personal portfolio website, built to showcase my skills, projects, and experience as a web developer. It’s created with HTML, CSS, and JavaScript, featuring a responsive design, smooth scrolling, animated text, and interactive buttons.
 
-The website includes the following sections:
+Sections: Home, About, Education, Skills, Projects, Contact
 
-Home: Introduction with animated roles and links to resume and GitHub.
+Technologies Used: HTML, CSS, JavaScript, Typed.js
 
-About: A brief description about me and my interests.
-
-Education: My academic background.
-
-Skills: A showcase of my technical skills.
-
-Projects: Highlights of projects I have worked on with images and descriptions.
-
-Contact: Contact information including email, LinkedIn, and GitHub.
-
-Features:
-
-Animated background and text effects.
-
-Responsive design for all devices.
-
-Sticky navigation bar for easy access to sections.
-
-Interactive buttons with hover effects.
-
-Purpose:
-This project helped me learn the basics of web development, design a modern layout, and create a professional personal portfolio to showcase my work.
+Purpose: To create a professional online portfolio and practice web development fundamentals.
