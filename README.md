@@ -3,6 +3,6 @@ This is my first personal portfolio website, built to showcase my skills, projec
 
 Sections: Home, About, Education, Skills, Projects, Contact
 
-Technologies Used: HTML, CSS, JavaScript, Typed.js
+Technologies Used: HTML, CSS, JavaScript,
 
 Purpose: To create a professional online portfolio and practice web development fundamentals.
