@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esha Gurram Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{ margin:0; padding:0; box-sizing:border-box; }
+       body{
+    font-family: 'Montserrat', sans-serif;
+    background: url("bgtech.jpg") no-repeat center center/cover;
+    animation: moveBg 20s linear infinite;
+    color: white;
+}
+@keyframes moveBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7,3,36,0.75);
+    z-index: -1;
+}
+
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding: 0 50px;
+            height: 80px;
+            background-color: rgb(27,4,42);
+            position: sticky; /* makes it stick on top */
+            top: 0;
+            z-index: 1000;
+          
+        }
+        nav .left{
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+        nav ul{
+            display:flex;
+            list-style:none;
+        }
+        nav ul li{
+            margin: 0 15px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            transition: 0.3s;
+        }
+        nav ul li a:hover{
+            color: rgb(153,153,226);
+        }
+
+        section{
+            max-width: 90vw;
+            margin:auto;
+            padding:60px 0;
+            opacity:1;
+            transition: all 0.8s ease;
+        }
+
+
+        .firstSection{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            flex-wrap:wrap;
+            margin-top:100px;
+        }
+        .firstSection .leftSection{
+            flex:1 1 400px;
+            padding:20px;
+        }
+        .firstSection .leftSection div{
+            font-size:3rem;
+            margin-bottom:10px;
+        }
+        #element{
+            color: rgb(233,126,231);
+            font-weight:bold;
+        }
+        .buttons{
+            margin-top:30px;
+        }
+        .btn{
+            padding:12px 20px;
+            margin-right:15px;
+            border:2px solid white;
+            border-radius:6px;
+            background:#1e2167;
+            color:white;
+            cursor:pointer;
+            font-size:1rem;
+            transition:0.3s;
+        }
+        .btn:hover{
+            background: rgb(153,153,226);
+            border-color: rgb(153,153,226);
+        }
+        .firstSection .rightSection{
+            flex:1 1 400px;
+            display:flex;
+            justify-content:center;
+        }
+        .firstSection .rightSection img{
+            width:50%;
+            border-radius:10px;
+        }
+        .purple{
+            color: rgb(233,126,231);
+        }
+
+        /* About Section */
+        #about, #education, #skills, #projects, #contact{
+            text-align:center;
+            
+        }
+        section h2{
+            font-size:2rem;
+            margin-bottom:20px;
+            color: rgb(233,126,231);
+        }
+        section p{
+            font-size:1rem;
+            color: gray;
+            margin-bottom:15px;
+            
+        }
+
+        /* Skills */
+        .skills-list{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            margin-top:30px;
+        }
+        .skills-list div{
+            background: rgb(27,4,42);
+            padding:15px 20px;
+            margin:10px;
+            border-radius:8px;
+            min-width:100px;
+        }
+
+        /* Projects */
+        .projects-container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-top:30px;
+        }
+        .project-card{
+            background: rgb(27,4,42);
+            width:400px;
+            margin:15px;
+            padding:15px;
+            border-radius:10px;
+            text-align:left;
+            transition:0.3s;
+        }
+        .project-card img{
+            width:100%;
+            border-radius:8px;
+            margin-bottom:10px;
+        }
+        .project-card h3{
+            margin-bottom:10px;
+            color:white;
+        }
+        .project-card p{
+            font-size:0.9rem;
+            color: gray;
+            margin-bottom:10px;
+        }
+        .project-card:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Contact */
+        #contact a{
+            color: rgb(153,153,226);
+            text-decoration:none;
+        }
+
+        /* Footer */
+        footer{
+            background: purple;
+            padding:20px;
+            text-align:center;
+            color: gray;
+        }
+
+        /* Section Animation */
+        .section-animate {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+
+        /* Responsive */
+        @media screen and (max-width:800px){
+            nav {
+                flex-direction: column;
+            }
+            .firstSection{
+                flex-direction: column-reverse;
+            }
+            .firstSection .leftSection, .firstSection .rightSection{
+                flex:1 1 100%;
+            }
+            .skills-list{
+                flex-direction:column;
+                align-items:center;
+            }
+            .projects-container{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    
+    <nav>
+        <div class="left">Esha's Portfolio</div>
+        
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Home Section -->
+    <section id="home" class="firstSection">
+        <div class="leftSection">
+            <div>Hi, My name is <span class="purple">Esha</span></div>
+            <div>and I am a passionate</div>
+            <div id="element"></div>
+            <div class="buttons">
+                <a href="Esha Gurram Resume final.pdf" target="_blank"><button class="btn">Download Resume</button></a>
+                <a href="https://github.com/eshagurram" target="_blank"><button class="btn">Visit GitHub</button></a>
+            </div>
+        </div>
+        <div class="rightSection">
+            <img src="esha1.png" alt="Esha Image" >
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        
+        <p>Hi! I’m <span class="purple">Esha Gurram</span>, a passionate Web Developer and a Frontend Developer from Pune, India.</p>
+        <p>I am currently pursuing <strong>B.Tech in IT Engineering</strong> and love building interactive websites,<br> designing graphics, and exploring new technologies.</p>
+        <p>In my free time, I enjoy dancing, singing, and drawing.</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>Bachelor of Engineering (B.E.) in Information Technology<br>
+        ABMSP’s Anantrao Pawar College of Engineering, Parvati, Pune<br>
+        2024 – Present (Expected Graduation: 2027)</p>
+
+        <p>HSC – Science (12th Grade)<br>
+        Muktangan Junior College, Pune (Maharashtra State Board)<br>
+        2023 | 66.17%</p>
+
+        <p>ICSE – 10th Grade<br>
+        St. Helena’s High School, Pune<br>
+        2021 | 89%</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>React.js</div>
+            <div>basic Java</div>
+            <div>DSA(learning)</div>
+            <div>Typed.js</div>
+            <div>MongoDB (NoSQL Database)</div>
+            <div>UI/UX Design</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+
+            <div class="project-card">
+                <img src="portfolio image.png" alt="">
+                <img src="portfolio 2.png" alt="">
+                <img src="portfolio 3.png" alt="">
+                <h3>Esha's Portfolio Website</h3>
+                <p>This is my first personal portfolio website, created to showcase my skills, projects, and experience as a web developer. Built with HTML, CSS, and JavaScript, it features a responsive design, smooth scrolling, interactive buttons, and animated text effects using Typed.js. The website includes sections for About Me, Education, Skills, Projects, and Contact, giving a professional yet personal presentation of my work. This project helped me learn how to create modern, interactive, and user-friendly web interfaces.</p>
+            </div>
+
+            <div class="project-card">
+                <img src="face detection.jpeg" alt="Face Detection based Attendance System">
+                <h3>Face Detection based Attendance System</h3>
+                <p>This project automates attendance marking using face recognition technology. It uses Python, OpenCV, and the face_recognition library to detect and identify faces in real-time via a webcam. Recognized faces are matched with pre-stored user data, and attendance records are automatically stored in a MongoDB database. The system reduces manual errors, prevents proxy attendance, and ensures accurate and efficient tracking. It demonstrates the practical integration of computer vision and NoSQL databases for real-world applications.</p>
+            </div>
+            <div class="project-card">
+                <img src="index chillverse.png" alt="ChillVerse">
+                <img src="choose chillverse.png" alt="">
+                <img src="song chillverse.png" alt="">
+                <img src="image.png" alt="">
+                <h3>Chillverse App</h3>
+                <p>I built Chillverse as a real-time chat and entertainment web application to create a fun and interactive space for users. It combines instant messaging with AI-powered responses and simple customization features to give a smooth and engaging experience.</p>
+                
+<      </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:eshagurram@gmail.com">eshagurram@gmail.com</a></p>
+        <p>Phone No.: 7083104988</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/esha-gurram-b956882b4/">go to LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/eshagurram" target="_blank">go to GitHub</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 <a href="https://www.eshagurramsportfolio.com" target="_blank" style="color: gray; text-decoration: none;">www.eshagurramsportfolio.com</a> | All Rights Reserved
+    </footer>
+
+    <!-- Typed.js Animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Frontend Developer','IT Student'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+    <!-- Smooth Scroll + Section Animation -->
+    <script>
+        // Smooth scroll & animation on nav click
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                target.classList.add('section-animate'); 
+                setTimeout(() => {
+                    target.classList.remove('section-animate');
+                }, 800);
+            });
+        });
+    </script>
+
+</body>
+</html>
